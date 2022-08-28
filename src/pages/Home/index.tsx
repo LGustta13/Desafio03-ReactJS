@@ -45,6 +45,19 @@ const Home = (): JSX.Element => {
           return response.data;
         })
         .then(response => setProducts(response))
+
+        /*
+        api.get<Product[]>('/products')
+        .then(response => {
+          const info = response.data.map((product) => {
+            ...product,
+            priceFormatted = formatPrice(product.price)
+          })
+          
+          return info;
+        })
+        .then(response => setProducts(response))
+         */
     }
 
     loadProducts();
@@ -52,7 +65,6 @@ const Home = (): JSX.Element => {
 
   function handleAddProduct(id: number) {
     addProduct(id);
-
   }
 
   return (
