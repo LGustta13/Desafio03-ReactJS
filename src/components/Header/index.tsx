@@ -7,8 +7,8 @@ import { Container, Cart } from './styles';
 import { useCart } from '../../hooks/useCart';
 
 const Header = (): JSX.Element => {
+  
   const { cart } = useCart();
-  console.log(cart);
   const cartSize = cart.reduce((acc, product) => {
     
     acc += 1;
